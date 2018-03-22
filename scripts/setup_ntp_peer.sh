@@ -30,4 +30,7 @@ systemctl enable ntpd
 # ntpq -p
 # ntpstat
 
+timedatectl set-ntp true
+
+
 exit 0
