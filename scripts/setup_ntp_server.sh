@@ -12,7 +12,7 @@ yum install -y ntp
 cp /etc/ntp.conf /etc/ntp.conf-orig
 
 sed -i 's/^server/#server/g' /etc/ntp.conf
-echo 'peer 10.2.4.10' >> /etc/ntp.conf
+echo 'server 127.127.1.0' >> /etc/ntp.conf
 
 
 systemctl restart ntpd 
