@@ -23,3 +23,5 @@ setenforce enforcing
 
 systemctl enable firewalld
 systemctl start firewalld
+
+exit 0
