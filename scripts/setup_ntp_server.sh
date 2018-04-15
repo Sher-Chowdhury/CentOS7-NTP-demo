@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# exit 0
+exit 0
 set -ex
 
 echo '##########################################################################'
@@ -28,5 +28,7 @@ systemctl enable ntpd
 # check this has worked by running commands like:
 # ntpq -p
 # ntpstat
+
+timedatectl set-ntp true
 
 exit 0
