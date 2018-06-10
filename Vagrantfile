@@ -19,7 +19,7 @@ end
 
 Vagrant.configure(2) do |config|
   config.vm.define "ntp_server" do |ntp_server|
-    ntp_server.vm.box = "bento/centos-7.4"
+    ntp_server.vm.box = "bento/centos-7.5"
     ntp_server.vm.hostname = "ntp-server.example.com"
     # https://www.vagrantup.com/docs/virtualbox/networking.html
     ntp_server.vm.network "private_network", ip: "10.2.4.10", :netmask => "255.255.255.0", virtualbox__intnet: "intnet2"
@@ -38,7 +38,7 @@ Vagrant.configure(2) do |config|
 
 
   config.vm.define "ntp_peer" do |ntp_peer|
-    ntp_peer.vm.box = "bento/centos-7.4"
+    ntp_peer.vm.box = "bento/centos-7.5"
     ntp_peer.vm.hostname = "ntp-peer.example.com"
     ntp_peer.vm.network "private_network", ip: "10.2.4.12", :netmask => "255.255.255.0", virtualbox__intnet: "intnet2"
 
